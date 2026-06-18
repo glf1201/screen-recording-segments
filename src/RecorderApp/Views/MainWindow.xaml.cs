@@ -88,7 +88,7 @@ public partial class MainWindow : Window
             return true;
         }
 
-        var dialog = new PasswordPromptWindow { Owner = this };
+        var dialog = CreatePasswordPromptWindow();
         var result = dialog.ShowDialog();
         if (result != true)
         {
@@ -102,6 +102,17 @@ public partial class MainWindow : Window
 
         WpfMessageBox.Show("退出密码错误。", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
         return false;
+    }
+
+    private PasswordPromptWindow CreatePasswordPromptWindow()
+    {
+        var dialog = new PasswordPromptWindow();
+        if (IsVisible)
+        {
+            dialog.Owner = this;
+        }
+
+        return dialog;
     }
 
     private void SettingsButton_Click(object sender, RoutedEventArgs e)
