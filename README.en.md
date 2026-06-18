@@ -1,4 +1,4 @@
-# Recorder
+# screen recording by segments
 
 [中文](./README.md) | [English](./README.en.md)
 
