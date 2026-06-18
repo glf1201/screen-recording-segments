@@ -1,4 +1,4 @@
-# 值守录屏工具
+# 分段录屏工具
 
 [中文](./README.md) | [English](./README.en.md)
 
